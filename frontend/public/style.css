@@ -1,0 +1,303 @@
+
+.logo_image {
+  width:60px;
+  height:60px;
+  border-radius:90%;
+ /* margin: 0px 10px -10px -20px;*/
+  margin-left: 20px;
+  align-items: center;
+  display: block;
+
+}
+.background_image{
+  width: 230px;
+  border-radius: 50%;
+  margin-left: 140px;
+  position: sticky;
+  z-index: 999;
+  top: -10px;
+  box-shadow: 0 2px 10px 8px rgba(74, 6, 74, 0.5);
+  
+}
+
+nav>h1{
+margin:0;
+margin-right:auto;
+color:#7045af;
+font-weight:700;
+font-size:17px;
+
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(233, 214, 246);
+  height:70px;
+  background-image: linear-gradient(to right, #ffffff, #ac85e4);
+  border-radius: 5px;
+  margin-top: -8px;
+  margin-left: -8px;
+  margin-right:-7px;
+  position: sticky;
+  z-index: 999;
+  top: -10px;
+  box-shadow: 0 2px 10px 5px rgba(74, 6, 74, 0.5);
+}
+
+.nav-items {
+  list-style: none;
+  display:flex;
+}
+
+.nav-items >li{
+  padding:12px;
+  font-size: 22px;
+  color:rgb(226, 242, 242);
+  font-weight: 700px;
+}
+body{
+height: 100vh;
+font-family: Inter,sans-serif;
+}
+
+main{
+color:#3a066b;
+height: 0px;
+padding: 0px 55px;
+
+}
+
+.main--title{
+ font-size: 25px;
+ padding-top: 130px;
+}
+
+
+
+/* CSS */
+.button1 {
+background-color: #FFFFFF;
+border: 1px solid #222222;
+border-radius: 8px;
+box-sizing: border-box;
+color: #222222;
+cursor: pointer;
+display: inline-block;
+font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+font-size: 16px;
+font-weight: 600;
+line-height: 20px;
+margin: 0;
+outline: none;
+padding: 7px 17px;
+position: relative;
+text-align: center;
+text-decoration: none;
+touch-action: manipulation;
+transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+user-select: none;
+-webkit-user-select: none;
+width: auto;
+}
+
+.button1:focus-visible {
+box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+transition: box-shadow .2s;
+}
+
+.button1:active {
+background-color: #F7F7F7;
+border-color: #000000;
+transform: scale(.96);
+}
+
+.button1:disabled {
+border-color: #DDDDDD;
+color: #DDDDDD;
+cursor: not-allowed;
+opacity: 1;
+}
+
+
+
+/* CSS */
+.button2 {
+background-color: rgb(231, 151, 252);
+border: 1px solid #222222;
+border-radius: 8px;
+box-sizing: border-box;
+color: #222222;
+cursor: pointer;
+display: inline-block;
+font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+font-size: 16px;
+font-weight: 600;
+line-height: 20px;
+margin: 0;
+outline: none;
+padding: 7px 17px;
+position: relative;
+text-align: center;
+text-decoration: none;
+touch-action: manipulation;
+transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+user-select: none;
+-webkit-user-select: none;
+width: auto;
+}
+
+.button2:focus-visible {
+box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+transition: box-shadow .2s;
+}
+
+.button2:active {
+background-color: #F7F7F7;
+border-color: #000000;
+transform: scale(.96);
+}
+
+.button2:disabled {
+border-color: #DDDDDD;
+color: #DDDDDD;
+cursor: not-allowed;
+opacity: 1;
+}
+
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    margin-top: 70px;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay{
+  backdrop-filter: blur(10px);
+  
+}
+.close-button{
+  display: flex;
+  justify-content: flex-end;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  position: absolute;
+  top: 2px;
+  right: 0px;
+}
+
+.register-pop-up-form, .login-pop-up-form{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: white;
+  padding: 40px 40px;
+  border-radius: 10px;
+  width: 23%;
+  box-shadow:5px 5px 15px -1px rgba(0,0,0,0.75);
+}
+.register-pop-up-form> .field,  .login-pop-up-form> .field {
+  margin-left: 65px;
+}
+
+.register-pop-up-form> .form--submit, .login-pop-up-form> .form--submit{
+  width: 90px;
+  margin-left: 100px;
+  margin-top:18px;
+}
+.register-pop-up-form> .text, .login-pop-up-form> .text{
+  margin-left: 70px;
+  margin-bottom: 18px;
+}
+
+.form-container{
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+}
+
+.register-form, .login-form{
+  background-color: white;
+  padding: 70px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: -700px;
+  margin-top: -400px;
+  box-shadow: 5px 5px 15px -1px rgba(0,0,0,0.75);
+}
+.register-pop-up-form> .form--title, .login-pop-up-form> .form--title{
+  margin-top:18px;
+  text-align: center;
+}
+
+.register-form> .form--title, .login-form> .form--title{
+  font-size: 24px;
+  margin-top: -30px;
+  margin-bottom: 40px;
+}
+
+.label{
+  font-size: 13px;
+  font-family:sans-serif;
+  color: #0a0909;
+  font-weight: 200px;
+}
+
+.error_message{
+  font-size: 12px;
+  font-family: sans-serif;
+  color:red;
+  font-weight: 10px;
+  margin-top: 10px;
+}
+
+.form--submit{
+  margin-top: -20px;
+  margin-bottom: -20px;
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: #639;
+  border: none;   
+  cursor: pointer; 
+}
+
+.text{
+  margin-top: 40px;
+  margin-bottom: -30px;
+  font-size: 10px
+}
+
+.button--link{
+  background: none;
+  border:none;
+  cursor: pointer;
+  padding: 0px;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 2px;
+  text-decoration-line: underline;
+}
+
+
+
+
+
+
+
