@@ -6,7 +6,8 @@ from routers import user as user_router
 from passlib.context import CryptContext
 from hashing import Hash
 import json
-import time
+import random
+
 
 
 
@@ -142,6 +143,19 @@ def test_get_me():
     assert response.json()["id"] == id
     assert response.json()["name"] == "testuser"
     assert response.json()["email"] == "test@gmail.com"
+    assert "followings" in response.json()
+    assert "followers" in response.json()
+    assert "friends_count" in response.json()
+
+# test: get user by id
+def test_get_user():
+    user_id = random.randint(1, id)
+
+    response = client.get(f"/user/{user_id}",headers={"Authorization": f"Bearer {access_token}"})
+    assert response.status_code == 200
+    assert response.json()["id"] == user_id
+    assert "name" in response.json()
+    assert "email" in response.json()
     assert "followings" in response.json()
     assert "followers" in response.json()
     assert "friends_count" in response.json()
