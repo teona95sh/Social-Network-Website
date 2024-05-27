@@ -101,10 +101,10 @@ class Follow(Base):
     )
 
     follower = relationship(
-        "User", back_populates="following", foreign_keys=[follower_id]
+        "User", back_populates="following", foreign_keys=[follower_id], overlaps = "follower"
     )
     target_user = relationship(
-        "User", back_populates="follower", foreign_keys=[target_user_id]
+        "User", back_populates="follower", foreign_keys=[target_user_id], overlaps = "following"
     )
 
 class Friendship(Base):

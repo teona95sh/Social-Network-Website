@@ -299,5 +299,40 @@ opacity: 1;
 
 
 
+/* CSS */
+.button_friends,.button_followers,.button_followings,.button_MyProfile,.button_notifications {
+  background-color: #fff;
+  border: 0 solid #e2e8f0;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  color: #0d172a;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 0.5rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 1rem 1.6rem;
+  text-align: center;
+  text-decoration: none #0d172a solid;
+  text-decoration-thickness: auto;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button_friends:hover,.button_followers:hover,.button_followings:hover,.button_MyProfile:hover,.button_notifications:hover {
+  background-color: #639;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .button_friends,.button_followers,.button_followings,.button_MyProfile,.button_notifications {
+    font-size: 1.02rem;
+    padding: 0.8rem 0.5rem;
+  }
+}
+
 
 

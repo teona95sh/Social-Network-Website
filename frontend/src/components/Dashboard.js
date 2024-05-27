@@ -32,6 +32,20 @@ export const Dashboard = () =>
     return(
         <main>
             <h1>Welcome to Dashboard!</h1>
+            <nav>
+              <div className="LeftMenu">
+                    <button className="button_MyProfile">My Profile</button>
+                    <br />
+                    <button className="button_friends">Friends</button>
+                    <br />
+                    <button className="button_followers">Followers</button>
+                    <br />
+                    <button className="button_followings">Followings</button>
+                    <br />
+                    <button className="button_notifications">Notifications</button>
+                    <br />
+              </div>
+            </nav>
         </main>
     );
 }

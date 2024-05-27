@@ -18,3 +18,13 @@ def create_follow( target_user_id: int,follow1:schemas.FollowCreate,db:Session =
 def unfollow_user(target_user_id,db:Session = Depends(get_db),current_user: int = Depends(oauth2.get_current_user)):
     user_id = current_user.id
     return follow.unfollow(target_user_id,db,user_id)
+
+@router.get("/followers_list")
+def get_followers_list(db:Session=Depends(get_db),current_user:int =Depends(oauth2.get_current_user)):
+    user_id = current_user.id 
+    return follow.show_followers_list(db,user_id)
+
+@router.get("/followings_list")
+def get_followings_list(db:Session=Depends(get_db),current_user:int =Depends(oauth2.get_current_user)):
+    user_id = current_user.id 
+    return follow.show_followings_list(db,user_id)

@@ -69,3 +69,45 @@ def unfollow(target_user_id:int,db:Session,user_id:int):
         return "successfully unfollowed"
     else:
         raise HTTPException(status_code=400, detail="User is not being followed")
+    
+def show_followers_list(db:Session,user_id:int):
+    user = db.query(models.User).filter(models.User.id == user_id).first()
+
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+    
+    followers = (
+    db.query(models.Follow.follower_id,models.User.name)
+    .join(models.User,models.Follow.follower_id == models.User.id)
+    .filter(models.Follow.target_user_id == user_id)
+    .all()
+)
+    followers_list = [{"follower_id": follower.follower_id,"follower_name": follower.name} for follower in followers]
+    if (followers):
+        return followers_list  
+    else:
+        return "followers list is empty"
+
+def show_followings_list(db:Session,user_id:int):
+    user = db.query(models.User).filter(models.User.id == user_id).first()
+
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+    followings = (
+    db.query(models.Follow.target_user_id,models.User.name)
+    .join(models.User,models.Follow.target_user_id == models.User.id)
+    .filter(models.Follow.follower_id == user_id)
+    .all()
+)
+    
+    followings_list = [{"following_id": follower.target_user_id,"following_name": follower.name} for follower in followings]
+    if (followings):
+        return followings_list  
+    else:
+        return "followings list is empty" 
+
+         
+ 
+        
+
+        
